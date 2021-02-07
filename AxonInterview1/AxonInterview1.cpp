@@ -2,19 +2,56 @@
 //
 
 #include <iostream>
+#include "ConnectFour.h"
+
+using namespace std;
+
+
+void test_print2DArray(bool arr[ROWSIZE][COLSIZE], int rows, int cols)
+{
+	bool			value;
+	cout << "Array: " << endl;
+
+	for (int rowIndex = 0; rowIndex < rows; rowIndex++)
+	{
+		for (int colIndex = 0; colIndex < cols; colIndex++)
+		{
+			value = arr[rowIndex][colIndex];
+			cout << value;
+			if (colIndex != cols-1) 
+			{
+				cout << ",";
+			}
+		}
+		cout << endl;
+	}
+
+	
+	std::cout << endl;;
+}
+void test_connect4()
+{
+	ConnectFour		game;
+	bool			gameValues[ROWSIZE][COLSIZE] =		{ {true, false, true, false, true, false, true, false},
+														  {false, true, true, true, false, false, true, true},
+														  {true, false, true, true,  false, false, true, true},
+														  {true, false, false, false, true, true, false, false},
+														  {false, true, true, false, false, false, true, true},
+														  {true, false, true, true,  true, false, true, true},
+														  {true, false, false, false, true, true, false, false},
+												          {false, false, true, true, false, false, true, true}
+														};
+
+	test_print2DArray(gameValues, ROWSIZE, COLSIZE);
+
+	cout << "Straight line found: " << game.isStraightLine(gameValues, ROWSIZE, COLSIZE) << endl;
+
+	cout << endl;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	std::cout << "Welcomes to Axon!" << endl << endl;
+
+	test_connect4();
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
