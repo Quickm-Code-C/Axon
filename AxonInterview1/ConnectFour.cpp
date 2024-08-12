@@ -3,20 +3,20 @@
 
 using namespace std;
 
-string ConnectFour::isStraightLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols)
+bool ConnectFour::isStraightLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols)
 {
 	string		result;
 	bool		found = false;
 
-	found = (isVertLine(arr, rows, cols)  ||
-			  isHorzLine(arr, rows, cols) ||
+	found = ( isVertLine(arr, rows, cols)     ||
+			  isHorzLine(arr, rows, cols)     ||
 		      isDiagLeftLine(arr, rows, cols) || 
 			  isDiagRightLine(arr, rows, cols)
 		     );
 
-	result = (found) ? "true" : "false";
+	// result = (found) ? "true" : "false";
 
-	return result;
+	return found;
 }
 
 bool	ConnectFour::isVertLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols)

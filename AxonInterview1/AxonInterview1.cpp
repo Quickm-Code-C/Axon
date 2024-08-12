@@ -27,13 +27,13 @@ void test_print2DArray(bool arr[ROWSIZE][COLSIZE], int rows, int cols)
 	}
 
 	
-	std::cout << endl;;
+	std::cout << endl;
 }
 void test_connect4()
 {
 	ConnectFour		game;
 	bool			gameValues[ROWSIZE][COLSIZE] =		{ {true, false, true, false, true, false, true, false},
-														  {false, true, true, true, false, false, true, true},
+														  {false, true, true, true, true, false, true, true},
 														  {true, false, true, true,  false, false, true, true},
 														  {true, false, false, false, true, true, false, false},
 														  {false, true, true, false, false, false, true, true},
@@ -43,8 +43,9 @@ void test_connect4()
 														};
 
 	test_print2DArray(gameValues, ROWSIZE, COLSIZE);
-
-	cout << "Straight line found: " << game.isStraightLine(gameValues, ROWSIZE, COLSIZE) << endl;
+	
+	
+	cout << "Straight line found: " << boolalpha << game.isStraightLine(gameValues, ROWSIZE, COLSIZE) << endl;
 
 	cout << endl;
 }

@@ -16,7 +16,7 @@ Output: boolean - 4 consecutive trues in a straight line (horiz, vert, diag left
 class ConnectFour
 {
 public:
-	std::string		isStraightLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
+	bool		isStraightLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
 
 protected:
 	bool			isVertLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
