@@ -19,8 +19,8 @@ public:
 	bool		isStraightLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
 
 protected:
-	bool			isVertLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
-	bool			isHorzLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
+	bool		isVertLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
+	bool		isHorzLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
 	bool		isDiagLeftLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
 	bool		isDiagRightLine(bool arr[ROWSIZE][COLSIZE], int rows, int cols);
 };
